@@ -1,0 +1,28 @@
+/* Styles for the weather app. */
+
+body {
+  margin: 50px auto;
+  background-image: url('/images/weather.png');
+  background-size: cover;
+}
+.container {
+  width: 300px;
+}
+.form-control {
+  width: 100%;
+  margin-top: 10px;
+}
+.weather_icon {
+  display: block;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+.row {
+  margin-left: 0;
+}
+.result .description {
+  font-size: 22px;
+  line-height: normal;
+}
