@@ -5,13 +5,11 @@ body {
   background-image: url('/images/weather.png');
   background-size: cover;
 }
-.container {
-  width: 300px;
+
+.center {
+  text-align: center;
 }
-.form-control {
-  width: 100%;
-  margin-top: 10px;
-}
+
 .weather_icon {
   display: block;
   margin: auto;
@@ -19,10 +17,12 @@ body {
   height: 50px;
   border: none;
 }
-.row {
-  margin-left: 0;
-}
+
 .result .description {
   font-size: 22px;
   line-height: normal;
+}
+
+#location {
+  display: none;
 }

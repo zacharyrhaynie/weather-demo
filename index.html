@@ -5,32 +5,29 @@
     <meta name="description” content="A demo PHP app that lets users check the weather. Uses the weather.com API, wunderground.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/images/sunny.png" />
-    <link href="https://maxcdn.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" integrity="sha384-4FeI0trTH/PCsLWrGCD1mScoFu9Jf2NdknFdFoJhXZFwsvzZ3Bo5sAh7+zL8Xgnd" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 
     <script
       src="http://code.jquery.com/jquery-1.12.4.min.js"
       integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
       crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js" integrity="sha384-vOWIrgFbxIPzY09VArRHMsxned7WiY6hzIPtAIIeTFuii9y3Cr6HE6fcHXy5CFhc" crossorigin="anonymous"></script>
-    <script src="js/bootstrap-typeahead.min.js" type="text/javascript"></script>
   </head>
 
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-med-12">
-          <h1 class="text-center">How's the Weather?</h1>
-          <input class="form-control typeahead" type="text" id="search"
-            placeholder="Enter your Zip or City, State"
-            autocomplete="off" />
-        </div>
-      </div>
+    <div class="center">
+      <h1 class="text-center">How's the Weather?</h1>
+      <form id="search-weather">
+        <input type="text" id="search" />
+        <input type="submit" id="submit"></input>
+      </form>
+
       <div class="result row text-center">
         <img class="weather_icon" src="images/trans.png" />
+        <div id="location">Current weather in <span id="city"></span>, <span id="state"></span>.</div>
         <div class="description"></div>
       </div>
     </div>
+
     <script src="js/weather.js"></script>
   </body>
 </html>
