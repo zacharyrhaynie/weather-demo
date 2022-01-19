@@ -31,5 +31,5 @@ $(function () {
     var desc = data.weather + " and " + data.temp_f + "&deg; F";
     $(".result .description").html(desc);
   }
-
+//Performing a change so I can commit and then PR. Woot, I'm such a noob!
 });
