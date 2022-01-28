@@ -5,7 +5,7 @@
 
   // API URL.
   // You can register for free to get your own api key (fb0... below). 
-  $url = "http://api.weatherapi.com/v1/current.json?key=fb0b4c5c22d04c22be2202032210112&aqi=no&q=";
+  $url = "http://api.weatherapi.com/v1/forecast.json?key=fb0b4c5c22d04c22be2202032210112&aqi=no&q=";
 
   // Check and filter query parameters.
   $query = filter_input(INPUT_GET, 'query', FILTER_DEFAULT);

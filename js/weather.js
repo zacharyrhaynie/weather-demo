@@ -4,8 +4,9 @@ $(function () {
     e.preventDefault();
     clearResult('');
 
+
     // Get the weather info for the selected search location.
-    $.get("/weather.php?query=" + $("#search").val(), function (data) {
+    $.get("/weather.php?query=" + $("#search").val() + "&days=3", function (data) {
       // Show weather results.
       if (data.temp_f) {
         showResult(data);
