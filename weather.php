@@ -25,6 +25,15 @@
     $result['icon_url'] = $parsed->current->condition->icon;
     $result['city'] = $parsed->location->name;
     $result['state'] = $parsed->location->region;
+    // Returns an array of the weather conditions for all days in the forecast
+    $forecastResult['weather'] = $parsed->forecast->forecastday->day->condition->text;
+    // Returns an array of the average temps for the forecast (not current) days
+    $forecastResult['avgtemp_f'] = $parsed->forecast->forecastday->day->avgtemp_f;
+    // Returns an array of the weather icons for the forecast (not current) days
+    $forecastResult['icon_url'] = $parsed->forecast->forecastday->day->condition->icon;
+    // Add both Current "result" and Forecast "forecastResult" into an object to be passed to .js
+    $payload['current'] = $result;
+    $payload['forecast'] = $forecastResult;
     header('Content-Type: application/json');
-    echo json_encode($result);
+    echo json_encode($payload);
   }
