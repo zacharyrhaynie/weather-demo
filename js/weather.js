@@ -42,6 +42,9 @@ $(function () {
       let day = $("<div></div>");
       let img = $("<img id='weather_icon'>").attr('src', forecastDay.day.condition.icon);
       day.append(img);
+      day.append("<br />")
+      let forecastDate = forecastDay.date;
+      day.append(forecastDate)
       let desc = forecastDay.day.condition.text + " and " + forecastDay.day.avgtemp_f + "&deg; F";
       // Throwaway variable to append.
       let descr = $("<div></div>").html(desc)
@@ -53,10 +56,12 @@ $(function () {
   //Listeners to ensure that current information is hidden or shown depending upon which radio button is selected.
   $("#formatChoice").on("click", function (e) {
     if (e.target.type == "radio" && e.target.value == "Current") {
+      $("#currFore").text("Current")
       $(".result .description").show()
       $(".weather_icon").show()
       $(".forecastResults").hide()
     } else if (e.target.type == "radio" && e.target.value == "Forecast") {
+      $("#currFore").text("Forecast")
       $(".forecastResults").show()
       $(".weather_icon").hide()
       $(".result .description").hide()
