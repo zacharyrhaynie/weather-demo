@@ -2,8 +2,12 @@
 
 body {
   margin: 50px auto;
-  background-image: url('/images/weather.png');
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f53fd539-88ec-47fa-8941-0bd634a87f07/d65ty28-ea37d28f-da6a-4954-aa22-c4af637e5f23.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Y1M2ZkNTM5LTg4ZWMtNDdmYS04OTQxLTBiZDYzNGE4N2YwN1wvZDY1dHkyOC1lYTM3ZDI4Zi1kYTZhLTQ5NTQtYWEyMi1jNGFmNjM3ZTVmMjMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.6WZqfn2PK8x4kZRTfvVq-3gDG27DpJm1RmFw5VVHJfg');
   background-size: cover;
+}
+
+.text-center{
+  font-family:  "Lucida Console";
 }
 
 .center {
@@ -29,4 +33,13 @@ body {
 
 #description #forecastResults{
   display: none;
+}
+
+.transformedClass{
+  background-color: white;
+  border-radius: 3em;
+  border-style: dashed;
+  border-width: 3px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: medium;
 }
