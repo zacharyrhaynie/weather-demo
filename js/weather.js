@@ -38,7 +38,7 @@ $(function () {
     // Pulls current from the payload and displays it's information.
     $(".weather_icon").attr("src", data.current.icon_url);
     var desc = data.current.weather + " and " + data.current.temp_f + "&deg; F";
-    $(".result .description").html(desc);
+    $(".description").html(desc);
     // For each day in forecast portion of the payload, display the information. Ensure that it responds to the size of the forecast payload.
     data.forecast.forEach(forecastDay => {
       let day = $("<div></div>");
