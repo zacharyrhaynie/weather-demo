@@ -3,6 +3,7 @@ $(function () {
   $("#search-weather").submit(function (e) {
     e.preventDefault();
     clearResult('');
+    $(".forecastResults").empty();
 
 
     // Get the weather info for the selected search location. Added days 3 to default to selecting 3 days in the forecast.
