@@ -3,7 +3,7 @@ $(function () {
   $("#search-weather").submit(function (e) {
     $("#resultDiv").attr("class", "transformedClass")
     e.preventDefault();
-    clearResult('');
+    //clearResult('');
     $(".forecastResults").empty();
 
 
