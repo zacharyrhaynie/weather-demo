@@ -17,14 +17,24 @@
     <div class="center">
       <h1 class="text-center">How's the Weather?</h1>
       <form id="search-weather">
-        <input type="text" id="search" />
+        <input type="text" id="search" placeholder="Enter a Zip or City" pattern="[!^A-Za-z0-9 ,]+" title="Please use Letters, Numbers, Commas or Spaces only."/>
         <input type="submit" id="submit"></input>
+        <br>
       </form>
+        <!-- Make sure that Current is selected to prevent confusion on which is being chosen. -->
+        <div id="formatChoice">
+        <label for="current">Current</label>
+        <input type="radio" id="current" name="type-toggle" value="Current" checked>
+        <label for="forecast">Forecast</label>
+        <input type="radio" id="forecast" name="type-toggle" value="Forecast">
+        </div>
 
       <div class="result row text-center">
         <img class="weather_icon" src="images/trans.png" />
-        <div id="location">Current weather in <span id="city"></span>, <span id="state"></span>.</div>
+        <div id="location"><span id="currFore">Current</span> weather in <span id="city"></span>, <span id="state"></span>.</div>
         <div class="description"></div>
+        <!-- Ensure that both are not displayed at a single time. If a user selects forecast PRIOR to entering the location then it flips anyways. -->
+        <div class="forecastResults" style="display: none;"></div>
       </div>
     </div>
 
