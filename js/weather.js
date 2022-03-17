@@ -14,20 +14,10 @@ $(function () {
       if (data.current.city) {
         prepareData(data);
       } else {
-        clearResult('No valid data for your location.');
+        $(".description").html('Invalid input. Please try again.');
       }
     });
   });
-
-  // Joe, I reject you're error message and substitue my professional one.
-  function clearResult($msg = 'Invalid input. Please try again.') {
-    $(".weather_icon").attr("src", "images/trans.png");
-    $("#location").hide();
-    $("#city").text();
-    $("#state").text();
-    $(".result .description").html($msg);
-    // JOE YOU FORGOT THE ;
-  };
 
   function prepareData(data) {
     // Moved location related information out because it applies to both,
