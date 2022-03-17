@@ -1,6 +1,7 @@
 $(function () {
   // React to hitting enter in the text box instead of clicking submit.
   $("#search-weather").submit(function (e) {
+    $("#resultDiv").attr("class", "transformedClass")
     e.preventDefault();
     clearResult('');
     $(".forecastResults").empty();
